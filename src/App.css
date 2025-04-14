@@ -1,0 +1,33 @@
+:where(.css-dev-only-do-not-override-1261szd).ant-menu-dark .ant-menu-item {
+    color: black !important;
+}
+
+:where(.css-dev-only-do-not-override-1261szd).ant-menu-dark .ant-menu-item-selected {
+    background-color: #4f6f52;
+    color: #f5f5f5 !important;
+}
+
+h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
+    color: #939393e0 !important;
+}
+
+:where(.css-dev-only-do-not-override-1261szd).ant-layout-sider .ant-layout-sider-trigger {
+    background-color: #4f6f52;
+}
+
+.space-align-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.space-align-block {
+    background: white;
+    width: 30.33%;
+    border-radius: 8px;
+}
+.content-left{
+    width: 70%;
+}
