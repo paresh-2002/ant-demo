@@ -29,10 +29,10 @@ const items = [
 ];
 
 function Sidebar() {
-    const [selectedKey, setSelectedKey] = useState("1"); // State to track selected menu item
+    const [selectedKey, setSelectedKey] = useState("1");
 
     const handleMenuClick = (e) => {
-        setSelectedKey(e.key); // Update selected key when a menu item is clicked
+        setSelectedKey(e.key);
     };
 
     return (
@@ -57,11 +57,11 @@ function Sidebar() {
             </div>
             <Menu
                 theme="dark"
-                selectedKeys={[selectedKey]} // Highlight the selected menu item
+                selectedKeys={[selectedKey]}
                 mode="inline"
-                style={{ background: "white", color: "black" }}
+                style={{ background: "white"}}
                 items={items}
-                onClick={handleMenuClick} // Handle menu item click
+                onClick={handleMenuClick}
             />
         </>
     );
