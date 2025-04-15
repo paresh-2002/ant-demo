@@ -19,12 +19,12 @@ function App() {
           collapsible
           collapsed={collapsed}
           onCollapse={value => setCollapsed(value)}
-          style={{ position: 'sticky', background: 'white' }}
+          style={{ background: 'white' }}
           className='sidebar-btn'
         >
           <Sidebar />
         </Sider>
-        <Layout>
+        <Layout className='main-content'>
           <Header style={{ padding: 0, background: 'white' }} >
             <Navbar />
           </Header>
