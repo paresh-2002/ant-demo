@@ -22,6 +22,9 @@ body {
 .ant-menu-dark .ant-menu-item {
     color: black;
 }
+.ant-menu-dark .ant-menu-item:hover{
+    color: black !important;
+}
 
 .ant-menu-item-selected {
     background-color: #4f6f52 !important;
