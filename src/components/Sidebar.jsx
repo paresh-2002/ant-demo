@@ -35,17 +35,21 @@ function Sidebar() {
             <div className="demo-logo-vertical" style={{
                 textAlign: 'center',
                 height: '64px',
-                background:'white'
+                background: 'white'
             }}>
-                <FaLeaf style={{fontSize: 'xxx-large',
-                paddingTop:'10px',
-                color: '#4f6f52',}}/>
+                <a href="/">
+                    <FaLeaf style={{
+                        fontSize: 'xxx-large',
+                        paddingTop: '10px',
+                        color: '#4f6f52',
+                    }} />
+                </a>
             </div>
             <Menu
                 theme="dark"
                 defaultSelectedKeys={["1"]}
                 mode="inline"
-                style={{background:'white',color: 'black'}}
+                style={{ background: 'white', color: 'black' }}
                 items={items}
             />
         </>

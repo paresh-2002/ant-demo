@@ -4,13 +4,15 @@ import React from "react";
 function Banner() {
   return (
     <Flex
-      justify="space-between"
-      style={{ background: "white", maxWidth: "100%", borderRadius: "8px" }}
+      justify="start"
+      style={{ background: "white", maxWidth: "100%", borderRadius: "8px", height:'30%' }}
+      className="banner-left"
     >
       <Flex
         vertical
         align="start"
-        justify="space-between"
+        justify="start"
+        gap={'20px'}
         style={{ padding: 32 }}
       >
         <Typography.Title level={3} style={{ marginTop: 0 }}>
@@ -22,7 +24,7 @@ function Banner() {
         >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </Typography.Title>
-        <div
+        <div className="top-banner-btn"
           style={{
             display: "flex",
             alignContent: "center",
@@ -30,7 +32,7 @@ function Banner() {
             fontWeight: "600"
           }}
         >
-          <Button style={{ background: "#4f6f52", color: "white" }}>
+          <Button style={{ background: "#4f6f52", color: "white" }} className="banner-btn">
             Explore More
           </Button>
           <Button>Top Sellers</Button>

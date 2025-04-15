@@ -3,6 +3,7 @@ import React from "react";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
+import { Card } from 'antd';
 
 function ItemsLists() {
   return (
@@ -14,7 +15,7 @@ function ItemsLists() {
         My Listing
       </Typography.Title>
       <div className="space-align-container">
-        <div className="space-align-block">
+        <Card hoverable className="space-align-block">
           <Space
             align="center"
             style={{ display: "flex", flexDirection: "column" }}
@@ -32,8 +33,8 @@ function ItemsLists() {
               Arecaceae
             </Typography.Title>
           </Space>
-        </div>
-        <div className="space-align-block">
+        </Card>
+        <Card hoverable className="space-align-block">
           <Space
             align="center"
             style={{ display: "flex", flexDirection: "column" }}
@@ -41,7 +42,7 @@ function ItemsLists() {
             <Image
               width={200}
               height={200} // Set a fixed height
-              style={{ objectFit: "cover" }} // Ensures the image fits properly
+              style={{ objectFit: "cover", maxWidth:'75%' }} // Ensures the image fits properly
               src={img2}
             />
             <Typography.Title
@@ -51,8 +52,8 @@ function ItemsLists() {
               Indoor Potted
             </Typography.Title>
           </Space>
-        </div>
-        <div className="space-align-block">
+        </Card>
+        <Card hoverable className="space-align-block">
           <Space
             align="center"
             style={{ display: "flex", flexDirection: "column" }}
@@ -70,7 +71,7 @@ function ItemsLists() {
               Succulent
             </Typography.Title>
           </Space>
-        </div>
+        </Card>
       </div>
     </div>
   );

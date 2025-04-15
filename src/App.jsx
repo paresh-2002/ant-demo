@@ -2,43 +2,49 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import { Layout} from 'antd'
+import { Flex, Layout } from 'antd'
 import { Footer } from 'antd/es/layout/layout'
 import Banner from './components/Banner'
 import ItemsLists from './components/ItemsLists'
-const { Header, Content,Sider} = Layout;
+import RightBanner from './components/RightBanner'
+import UserList from './components/UserList'
+const { Header, Content, Sider } = Layout;
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <>
-    <Layout style={{ minHeight: '100vh' }}>
-    <Sider
-      collapsible
-      collapsed={collapsed}
-      onCollapse={value => setCollapsed(value)}
-      style={{position:'sticky',background:'white' }}
-    >
-      <Sidebar/>
-    </Sider>
-      <Layout>
-        <Header style={{ padding: 0, background:'white'}} >
-          <Navbar/>
-        </Header>
-        <Content style={{ margin: '0 16px', padding:'50px', display:'flex', justifyContent:'space-between',alignItems:'start'}}>
-       <div className='content-left'>
-       <Banner/>
-       <ItemsLists/>
-       </div>
-       <div className='content-right'>
-       <Banner/>
-       </div>
-        </Content>  
-        <Footer style={{ textAlign: 'center', background:'#e6e3e3', height:'48px', paddingBottom:'10px'}}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer>
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider
+          collapsible
+          collapsed={collapsed}
+          onCollapse={value => setCollapsed(value)}
+          style={{ position: 'sticky', background: 'white' }}
+          className='sidebar-btn'
+        >
+          <Sidebar />
+        </Sider>
+        <Layout>
+          <Header style={{ padding: 0, background: 'white' }} >
+            <Navbar />
+          </Header>
+          <Content style={{ padding: '32px' }}>
+            <Flex gap={'10px'}>
+              <div className='content-left'>
+                <Banner />
+                <ItemsLists />
+              </div>
+              <div className='content-right'>
+                <RightBanner />
+                <UserList />
+              </div>
+            </Flex>
+          </Content>
+          <Footer style={{ textAlign: 'center', background: '#e6e3e3', paddingBottom: '10px', color:'#4f6f52'}}>
+            Ant Design ©{new Date().getFullYear()} Created by Ant UED
+          </Footer>
+        </Layout>
       </Layout>
-    </Layout>
     </>
   )
 }
