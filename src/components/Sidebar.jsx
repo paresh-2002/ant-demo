@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import {
     CarryOutOutlined,
     LogoutOutlined,
@@ -29,28 +29,39 @@ const items = [
 ];
 
 function Sidebar() {
+    const [selectedKey, setSelectedKey] = useState("1"); // State to track selected menu item
+
+    const handleMenuClick = (e) => {
+        setSelectedKey(e.key); // Update selected key when a menu item is clicked
+    };
 
     return (
         <>
-            <div className="demo-logo-vertical" style={{
-                textAlign: 'center',
-                height: '64px',
-                background: 'white'
-            }}>
+            <div
+                className="demo-logo-vertical"
+                style={{
+                    textAlign: "center",
+                    height: "64px",
+                    background: "white"
+                }}
+            >
                 <a href="/">
-                    <FaLeaf style={{
-                        fontSize: 'xxx-large',
-                        paddingTop: '10px',
-                        color: '#4f6f52',
-                    }} />
+                    <FaLeaf
+                        style={{
+                            fontSize: "xxx-large",
+                            paddingTop: "10px",
+                            color: "#4f6f52"
+                        }}
+                    />
                 </a>
             </div>
             <Menu
                 theme="dark"
-                defaultSelectedKeys={["1"]}
+                selectedKeys={[selectedKey]} // Highlight the selected menu item
                 mode="inline"
-                style={{ background: 'white', color: 'black' }}
+                style={{ background: "white", color: "black" }}
                 items={items}
+                onClick={handleMenuClick} // Handle menu item click
             />
         </>
     );

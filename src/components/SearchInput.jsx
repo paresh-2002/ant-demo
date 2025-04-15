@@ -50,7 +50,7 @@ function SearchInput() {
       onSearch={handleSearch}
       size="large"
     >
-      <Input.Search size="large" placeholder="input here" enterButton />
+      <Input.Search size="large" placeholder="input here" enterButton/>
     </AutoComplete>
   );
 }

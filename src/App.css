@@ -15,22 +15,31 @@ body {
     overflow-x: hidden;
 }
 
-
-:where(.css-dev-only-do-not-override-1261szd).ant-menu-dark .ant-menu-item {
-    color: black !important;
+.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid.ant-btn-lg.ant-input-search-button {
+    background-color: #4f6f52;
 }
 
-:where(.css-dev-only-do-not-override-1261szd).ant-menu-dark .ant-menu-item-selected {
-    background-color: #4f6f52;
+.ant-menu-dark .ant-menu-item {
+    color: black;
+}
+
+.ant-menu-item-selected {
+    background-color: #4f6f52 !important;
     color: #f5f5f5 !important;
 }
 
-h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
-    color: #939393e0 !important;
+.ant-menu-item-selected:hover {
+    background-color: #4f6f52 !important;
+    color: #f5f5f5 !important;
 }
 
-:where(.css-dev-only-do-not-override-1261szd).ant-layout-sider .ant-layout-sider-trigger {
-    background-color: #4f6f52;
+.ant-menu-item {
+    transition: background-color 0.3s ease;
+}
+
+.ant-layout-sider-trigger {
+    background-color: #4f6f52 !important;
+    color: #f5f5f5 !important
 }
 
 .navbar {
@@ -38,18 +47,18 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-  }
-  
-  .navbar-title {
+}
+
+.navbar-title {
     margin-top: 15px;
     color: #333;
-  }
-  
-  .navbar-actions {
+}
+
+.navbar-actions {
     display: flex;
     gap: 15px;
     align-items: center;
-  }
+}
 
 
 
@@ -104,7 +113,7 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
         order: 2
     }
 
-    .banner-left{
+    .banner-left {
         height: 20% !important;
     }
 
@@ -132,7 +141,8 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
     .content-right .right-banner-left {
         order: 2
     }
-    .ant-select.ant-select-lg.ant-select-outlined.ant-select-auto-complete.css-dev-only-do-not-override-1261szd.ant-select-single.ant-select-customize-input.ant-select-show-search{
+
+    .ant-select.ant-select-lg.ant-select-outlined.ant-select-auto-complete.css-dev-only-do-not-override-1261szd.ant-select-single.ant-select-customize-input.ant-select-show-search {
         width: 80% !important;
     }
 
@@ -141,15 +151,16 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
 
 
 @media (max-width:768px) {
-    header{
+    header {
         height: 105px !important;
     }
+
     .navbar {
         flex-direction: column;
         align-items: center;
         padding: 10px;
         gap: 10px;
-        
+
     }
 
     .navbar-title {
@@ -157,16 +168,18 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
         text-align: center;
     }
 }
+
 @media (max-width: 640px) {
-    header{
+    header {
         height: 105px !important;
     }
+
     .navbar {
         flex-direction: column;
         align-items: center;
         padding: 10px;
         gap: 10px;
-        
+
     }
 
     .navbar-title {
@@ -223,14 +236,15 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
 
 
 
-    .top-banner-btn{
+    .top-banner-btn {
         flex-direction: column !important;
         width: 100%;
-        
+
     }
-    .top-banner-btn .banner-btn{
+
+    .top-banner-btn .banner-btn {
         width: 100% !important;
-        
+
     }
 }
 
@@ -264,10 +278,11 @@ h4:where(.css-dev-only-do-not-override-1261szd).ant-typography {
 
     .ant-layout-content .css-dev-only-do-not-override-1261szd {
         flex-direction: column;
-        
+
     }
+
     .ant-layout-content .css-dev-only-do-not-override-1261szd h1 {
         font-size: 19px !important;
     }
-    
+
 }
